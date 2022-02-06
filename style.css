@@ -41,22 +41,21 @@ body {
     font-family: 'Share Tech Mono', monospace;
 }
 
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
 .buttons {
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    margin: 20px;
 }
 
-.start {
-    background-color: green;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
-    color: #fff;
-}
+
 
 .reset {
     background-color: rebeccapurple;
@@ -67,4 +66,58 @@ body {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1rem;
     color: #fff;
+}
+
+.stop {
+    background-color: red;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    color: #fff;
+    margin-left: 20px;
+}
+
+
+.start {
+    background-color: green;
+    font-family: 'Share Tech Mono', monospace;
+    margin-right: 20px;
+    font-size: 1rem;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid black;
+    border-radius: 56px;
+    color: #fff;
+    cursor: pointer;
+    outline: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.start:before {
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: "";
+    height: 50%;
+    left: 4%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    transition: all .3s;
+    width: 92%;
+}
+
+.start:hover {
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
 }
