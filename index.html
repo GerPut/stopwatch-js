@@ -12,12 +12,12 @@
 <body>
     <div class="container">
         <div class="stopwatch">
-            <div class="display">00:00:00</div>
+            <div id="display" class="display"><span id="timer"></span></div>
             <div class="buttons">
-                <div><button class="start">Start</button></div>
-                <div><button class="stop">Stop</button></div>
+                <div><button onclick="startTimer()" class="start">Start</button></div>
+                <div><button onclick="stopTimer()" class="stop">Stop</button></div>
             </div>
-            <div><button class="reset">Reset</button></div>
+            <div><button onclick="resetTimer()" class="reset">Reset</button></div>
         </div>
     </div>
     <script src="app.js"></script>
